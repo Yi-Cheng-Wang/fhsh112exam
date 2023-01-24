@@ -26,7 +26,7 @@ def main(argv):
     ansfile = open(argv[1], 'r', encoding='UTF-8')
     outfile = open(argv[2], 'r', encoding='UTF-8')
 
-    for index, (out, ans) in enumerate(zip_longest(outfile.readlines(), ansfile.readlines()), 1):
+    for index, (iin, out, ans) in enumerate(zip_longest(infile.readlines(), outfile.readlines(), ansfile.readlines()), 1):
         if ans is None :
             result["$JUDGE_RESULT"] = "OLE"
             result["$LINECOUNT"]= str(index)
@@ -38,7 +38,7 @@ def main(argv):
             result["$LINECOUNT"]=str(index)
             result["$MESSAGE"]="WA"
             return
-        if len(out.strip()) > len(ans.strip()) or cnt(out.strip()) != cnt(ans.strip()):
+        if len(out.strip()) > len(ans.strip()) or str(cnt(out.strip())) != iin.strip():
             result["$JUDGE_RESULT"]="WA"
             result["$LINECOUNT"]=str(index)
             result["$USEROUT"]=out.strip()
