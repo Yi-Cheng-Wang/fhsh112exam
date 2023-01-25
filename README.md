@@ -1,13 +1,36 @@
 # fhsh112exam
 ## 美味布丁
-status: finished!  
-grade of difficlty: APCS1  
-topic number: No.1
+狀態：完成！  
+難度：APCS1  
+題目標號：1  
+測驗內容：基礎運算能力(加減乘除)、基礎語法(判斷、輸入輸出)
+## 2
+狀態：尚未決定！  
+難度：APCS1  
+題目標號：2  
+測驗內容：基礎運算能力(找最大最小值)、基礎語法(判斷、迴圈、輸入輸出)
 ## 資料驗證
-status: finished!  
-grade of difficlty: APCS2  
-topic number: No.3
+狀態：完成！  
+難度：APCS2  
+題目標號：3  
+測驗內容：陣列、輸入輸出掌控、記憶體掌控
+## 4
+狀態：尚未決定！  
+難度：APCS3  
+題目標號：4  
+測驗內容：None
+## 5
+狀態：尚未決定！  
+難度：APCS3  
+題目標號：5  
+測驗內容：None
 ## 滿頭問號
-status: finished!  
-grade of difficlty: APCS4  
-topic number: No.6
+狀態：完成！  
+難度：APCS4  
+題目標號：6  
+測驗內容：動態規劃、質數篩
+## 7
+狀態：尚未決定！  
+難度：APCS5  
+題目標號：7  
+測驗內容：None
