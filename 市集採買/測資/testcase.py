@@ -8,7 +8,14 @@ def pnt(p):
         pnt(p*2+1)
     return
 num = int(input())
-d = (num//5+1)*5
+if(num<=10):
+    d=5
+elif(num<=29):
+    d=10
+elif(num<=52):
+    d=15
+else:
+    d=20
 m = 100000
 bag = ran((d*m)//4, (d*m)//3)
 print(bag)
