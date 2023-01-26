@@ -27,8 +27,10 @@ void report()
         }
         ans++;
     }
-    maxans=ans;
-    vans.assign(usroad.begin(),usroad.end());
+    if(maxans<=ans){
+        maxans=ans;
+        vans.assign(usroad.begin(),usroad.end());
+    }
     return;
 }
 
