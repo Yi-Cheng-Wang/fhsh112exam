@@ -32,5 +32,5 @@ for i in range(m):
     while(a in M):
         a = ran(0, 10000000)
     M.add(a)
-    ans += "\n" + str(a) + " " + str(ran(1, 10000))
+    ans += "\n" + str(a) + " " + str(ran(1, 1000000000))
 print(ans)
