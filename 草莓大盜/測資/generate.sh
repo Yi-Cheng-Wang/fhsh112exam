@@ -1,6 +1,6 @@
 #!/bin/bash
 num=0
-top=100
+top=20
 while [[ $num -lt $top ]]
 do
 	printf "%.2d" $num > filename.txt
