@@ -2,13 +2,14 @@
 #include <iostream>
 using namespace std;
 
-struct node{int P, R;} N[1001], M[1001];
+struct node{int P, R;} N[1000001], M[1000001];
 bool cmp(node a, node b){
     return a.P < b.P;
 }
 
 int n, m;
-int dp[2][1001] = {}, f_ = 0, t_ = 1;
+long long dp[2][10001] = {};
+int f_ = 0, t_ = 1;
 
 int bs(int x, int tp){
     if(x <= M[0].P) return 0;
@@ -77,7 +78,7 @@ int main() {
         first_r = 2000000000;
         for(al=l, ar=N[i].P; al<=N[i].P && ar<r; al++){
             if((N[i].P-al)*3 < N[i].R){
-                d = al-N[i].P; //­tªº
+                d = al-N[i].P; //è² çš„
                 ar = N[i].P+N[i].R+d*2;
             }
             else{
@@ -90,16 +91,15 @@ int main() {
             dp[t_][x] = max(dp[f_][min(al, last_r+1)-pl] + swB(al, ar), dp[t_][x]);
             dp[t_][x+1] = dp[t_][x];
             dp[t_][x+2] = dp[t_][x];
-            //printf("%2d ~ %2d, c = %d, dp[][%d]=%d\n", al, ar, swB(al, ar), ar-N[i].P, dp[t_][ar-N[i].P]);
+
         }
 
         pl=N[i].P+1;
         f_ = 1-f_;
         t_ = 1-t_;
         last_r = r;
-        //printf("\n");
     }
 
-    printf("%d", dp[f_][last_r+1-pl]);
+    printf("%lld", dp[f_][last_r+1-pl]);
     return 0;
 }
